@@ -1,5 +1,3 @@
-using System;
-
 namespace ScottBrady91.PasswordlessAuthentication.Models
 {
     public class ErrorViewModel
