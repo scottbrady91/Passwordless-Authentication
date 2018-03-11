@@ -60,6 +60,8 @@ namespace ScottBrady91.PasswordlessAuthentication.Controllers
 
             if (isValid)
             {
+                await userManager.UpdateSecurityStampAsync(user);
+
                 await HttpContext.SignInAsync(
                     IdentityConstants.ApplicationScheme,
                     new ClaimsPrincipal(new ClaimsIdentity(
